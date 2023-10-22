@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>커피목록</title>
+</head>
+<body>
+    <h1>커피목록</h1>
+    <div th:unless="${#lists.isEmpty(coffeeList)}">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="item : ${coffeeList}">
+                    <td th:text="${item.id}"></td>
+                    <td th:text="${item.name}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
