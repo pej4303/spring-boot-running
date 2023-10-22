@@ -21,7 +21,6 @@ public class Coffee {
         this.id = id;
         this.name = name;
     }
-
     public Coffee(String name) {
         this( UUID.randomUUID().toString(), name);
     }
